@@ -1,0 +1,22 @@
+{
+  "name": "ejercicio3",
+  "version": "1.0.0",
+  "description": "Practicando usando flexbox en barra de navegación",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauxdl/LemoncodeMasterFrontend.git"
+  },
+  "author": "Laura Díaz Lorenzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauxdl/LemoncodeMasterFrontend/issues"
+  },
+  "homepage": "https://github.com/lauxdl/LemoncodeMasterFrontend#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

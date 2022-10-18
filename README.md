@@ -1,5 +1,6 @@
 # LemoncodeMasterFrontend 
-Master's Degree specialized in Frontend (https://lemoncode.net/master-frontend#inicio-banner), with specialized content on the most cutting-edge technologies:
+Master Front-end https://lemoncode.net/master-frontend#inicio-banner:
+With specialized content on the most cutting-edge technologies:
 
 - Git
 - Flexbox
