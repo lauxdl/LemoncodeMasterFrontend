@@ -1,0 +1,75 @@
+@use "tema1" as *;
+//@use "tema2" as *; //Descomentar para cambiar de tema y comentar tema1
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.default-text{
+    font: {
+        family: $default-font;
+        size: $default-font-size;
+    }
+}
+
+.principal-text{
+    font: {
+        family: $principal-font;
+        size: $default-font-size;
+    }
+}
+
+.secondary-text{
+    font: {
+        family: $secondary-font;
+        size: $secondary-font-size;
+    }
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 130px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    font-family: $default-font;  
+    margin-left: 15px;
+    margin-top: 15px;  
+}
+
+.item-default{
+    padding: 20px 20px 20px;
+    min-height: 90px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.item-base {
+    @extend .item-default;
+    background: $color-base;
+}
+
+.item-important {
+    @extend .item-default;
+    background: $color-important;
+}
+
+.item-warning{
+    @extend .item-default;
+    background: $color-warning;
+}
+
+.item-principal{
+   padding: 20px 20px 20px;
+   min-height: 90px;
+   width: 200px
+}
+
+.item-box{
+    @extend .item-default;
+    box-shadow: $box-shadow;
+}
