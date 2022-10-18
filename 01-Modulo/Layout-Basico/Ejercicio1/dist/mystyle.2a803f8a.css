@@ -1,0 +1,108 @@
+.container, .container-3, .container-2, .container-1 {
+  display: flex;
+  color: white;
+}
+
+.box {
+  padding: 40px 15px 40px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.container-1 .box {
+  background-color: red;
+}
+.container-1 .box:not(.base-color) {
+  color: aqua;
+}
+.container-1 .darken-1 {
+  background-color: #e00000;
+}
+.container-1 .darken-2 {
+  background-color: #c20000;
+}
+.container-1 .darken-3 {
+  background-color: #a30000;
+}
+.container-1 .darken-4 {
+  background-color: #850000;
+}
+.container-1 .lighten-1 {
+  background-color: #ff1a1a;
+}
+.container-1 .lighten-2 {
+  background-color: #ff3333;
+}
+.container-1 .lighten-3 {
+  background-color: #ff4d4d;
+}
+.container-1 .lighten-4 {
+  background-color: #ff6666;
+}
+
+.container-2 .box {
+  background-color: blue;
+}
+.container-2 .box:not(.base-color) {
+  color: yellow;
+}
+.container-2 .darken-1 {
+  background-color: #0000e0;
+}
+.container-2 .darken-2 {
+  background-color: #0000c2;
+}
+.container-2 .darken-3 {
+  background-color: #0000a3;
+}
+.container-2 .darken-4 {
+  background-color: #000085;
+}
+.container-2 .lighten-1 {
+  background-color: #3333ff;
+}
+.container-2 .lighten-2 {
+  background-color: #6666ff;
+}
+.container-2 .lighten-3 {
+  background-color: #9999ff;
+}
+.container-2 .lighten-4 {
+  background-color: #ccccff;
+}
+
+.container-3 .box {
+  background-color: green;
+}
+.container-3 .box:not(.base-color) {
+  color: purple;
+}
+.container-3 .darken-1 {
+  background-color: #006c00;
+}
+.container-3 .darken-2 {
+  background-color: #005700;
+}
+.container-3 .darken-3 {
+  background-color: #004300;
+}
+.container-3 .darken-4 {
+  background-color: #002e00;
+}
+.container-3 .lighten-1 {
+  background-color: #00cd00;
+}
+.container-3 .lighten-2 {
+  background-color: #1aff1a;
+}
+.container-3 .lighten-3 {
+  background-color: #67ff67;
+}
+.container-3 .lighten-4 {
+  background-color: #b3ffb3;
+}
+
+/*# sourceMappingURL=/mystyle.2a803f8a.css.map */

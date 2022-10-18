@@ -1,0 +1,108 @@
+@use "base" as *;
+
+@function color-box-darken($color,$amount) {
+    @return darken($color, $amount * 2);
+}
+
+@function color-box-lighten($color,$amount) {
+    @return lighten($color, $amount );
+}
+
+
+
+.container{
+    display: flex;
+    color: $font-color-default; 
+}
+
+.box {
+    padding: 40px 15px 40px;
+    margin: 5px;
+    border-radius: 5px;
+    font: {
+        family: sans-serif;
+        size: 15px;
+        weight: bold;
+    }
+    
+}
+
+.container-1 {
+    @extend .container;
+    
+    .box {
+        background-color: $base-color-red;
+        &:not(.base-color){
+            color: complement($base-color-red);
+        }
+       
+    }
+
+    $i: 1;
+    @while $i <= 4 {
+    .darken-#{$i} {
+        background-color: color-box-darken($base-color-red, 3 * $i);
+    }
+    $i: $i + 1;
+    }
+
+    $i: 1;
+    @while $i <= 4 {
+    .lighten-#{$i} {
+        background-color: color-box-lighten($base-color-red, 5 * $i);
+    }
+    $i: $i + 1;
+    }
+}
+
+.container-2 {
+    @extend .container;
+    .box {
+        background-color: $base-color-blue;
+        &:not(.base-color){
+            color: complement($base-color-blue);
+        }
+    }
+
+    $i: 1;
+    @while $i <= 4 {
+    .darken-#{$i} {
+        background-color: color-box-darken($base-color-blue, 3 * $i);
+    }
+    $i: $i + 1;
+    }
+
+    $i: 1;
+    @while $i <= 4 {
+    .lighten-#{$i} {
+        background-color: color-box-lighten($base-color-blue, 10 * $i);
+    }
+    $i: $i + 1;
+    }
+}
+
+.container-3 {
+    @extend .container;
+    .box {
+        background-color: $base-color-green;
+        &:not(.base-color){
+            color: complement($base-color-green);
+        }
+    }
+
+    $i: 1;
+    @while $i <= 4 {
+    .darken-#{$i} {
+        background-color: color-box-darken($base-color-green, 2 * $i);
+    }
+    $i: $i + 1;
+    }
+
+    $i: 1;
+    @while $i <= 4 {
+    .lighten-#{$i} {
+        background-color: color-box-lighten($base-color-green, 15 * $i);
+    }
+    $i: $i + 1;
+    }
+}
