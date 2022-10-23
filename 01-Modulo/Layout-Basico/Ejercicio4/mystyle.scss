@@ -1,0 +1,87 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica";
+    font-size: 16px;
+    background-color: #eee;
+
+}
+
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "image image image image"
+    "title title title title"
+    "text text text text"
+    "datePublish datePublish datePublish datePublish"
+    "button button button button";
+    align-content: space-around;
+    justify-items: center;
+    justify-content: center;
+    grid-column-gap: 10px;
+}
+
+.card {
+    width:auto;
+	height: 1fr;
+    box-shadow: 0px 7px 10px rgba(black, 0.5);
+    &:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+}
+
+.card-body{
+    padding:10px;
+}
+
+.card-image{
+    grid-area: image;
+    
+    img{
+        width: 100%;
+        min-height: 1fr;
+    }
+
+}
+.card-title{
+    grid-area: title;
+}
+.card-description{
+    grid-area: text;
+
+}
+.card-published{
+    grid-area: datePublish;
+    font-size: 12px;
+    span{
+        color:green;
+    }
+    text-align: right;
+}
+
+.card-button{
+    grid-area: button;
+    align-content: stretch;
+    width: 100%;
+    background-color: green; 
+    border: 5px solid green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    &:hover{
+        background:White;
+        color: black;
+    }
+    padding:5px;
+   
+}
+

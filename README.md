@@ -7,6 +7,7 @@ With specialized content on the most cutting-edge technologies:
 - CSS Grid
 - Parcel 
 - CSS in JS
+- ES6/ES7 
 - Typescript 
 - Webpack 
 - Material Design
@@ -18,7 +19,6 @@ With specialized content on the most cutting-edge technologies:
 - Jest 
 - GraphQL 
 - lodash/fp 
-- ES6/ES7 
 - As well as areas such as security: cookies - headers - JWT - XSS and XSFR prevention 
 - With special emphasis on code quality and unit testing (TDD, Jest, React Testing Library, Jest + Typescript).
 - Without forgetting the infrastructure, focusing on leading cloud providers (Amazon, Azure, Heroku).

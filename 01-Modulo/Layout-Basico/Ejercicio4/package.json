@@ -11,5 +11,8 @@
     "url": "https://github.com/lauxdl/"
   },
   "author": "Laura Díaz Lorenzo",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
 }
