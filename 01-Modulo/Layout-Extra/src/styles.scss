@@ -1,0 +1,210 @@
+$main-color: #e0e0e0;
+$lemoncode-color: #d9d900;
+$nav-color: #4b5320;
+$ligh-green-color: #e3f988;
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Verdana", Calibri, sans-serif;
+    
+}
+
+header{
+    height: 10vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-content: space-around;
+
+    .toolbar{
+        padding: 0px 10px 0px 10px;
+        color: black;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: center;
+        height: 4vh;
+    }
+
+    .page-title{
+        background-color: $lemoncode-color;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        font-size: 25px;
+        color: white;
+        height: 6vh;
+       
+    }
+}
+
+.page-container{
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 15vh);
+    
+    nav{
+        background: $nav-color;
+    }
+
+    .menu-container{
+        align-self: flex-start;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 250px;
+
+        .menu-title{ 
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 5px 0px 5px 0px;
+            font-weight: bold;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            background: $ligh-green-color;
+            padding: 10px;
+            border-bottom: 1px solid $nav-color;
+
+ 
+            &:hover {
+                background-color:rgba(0, 0, 0, .85);
+                color:#fff;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                > a {
+                  color:#fff;
+                }
+            }
+        }
+        
+    }
+
+    main {
+        flex: 1;
+        background: $main-color;
+    }
+
+    .list{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        gap: 20px;
+        margin: 20px 50px 20px;
+
+    }
+
+    .item{
+        align-items: stretch;
+        align-content: space-around;
+
+    }
+
+    .card{
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 230px;
+        padding: 20px 20px 10px;
+        text-align: center;
+        img {
+            border-radius:50px;
+            margin-bottom:5px
+          }
+        background: white;
+
+        &:hover {            
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
+        }
+    }
+
+}
+
+footer {
+    background: $ligh-green-color;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    header{
+        display: none;
+    }
+
+    .page-container{
+
+        flex-direction: column;
+        min-height: calc(100vh - 10vh);
+        justify-content: center;
+        
+
+        nav  {
+
+            display: flex;
+            flex-flow: row nowrap;
+            position: fixed;
+            top: 0;
+            width: 100%;
+
+        }
+    
+        .menu-container {
+
+            width: 100%;
+
+            .menu-title{
+                display: none;
+            }
+
+            ul{ 
+                display: flex;
+                justify-content:center;
+                gap: 10%;
+            }
+
+            li{
+                margin: 5px;
+                text-align: center;
+                width:100px;
+            }
+        }
+
+        main {
+            margin-top: 40px;
+        }
+
+        .list{
+            margin: 20px 20px;
+        }
+
+        .card{
+            width: 100%;
+            border: 0;
+            border-radius: 0;
+            text-align: left;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+       
+    }
+
+}
