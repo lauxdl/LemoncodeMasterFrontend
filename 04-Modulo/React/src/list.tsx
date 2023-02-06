@@ -1,38 +1,53 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Button, Input } from "@mui/material";
+import { MemberEntity } from "./model";
+import Box from '@mui/material/Box';
+import { MemberCard } from "./member-card";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+import TextField from "@mui/material/TextField";
+import { OrganizationSearch } from "./organization-search";
+import AppNavBar from "./app-bar";
 
-interface MemberEntity {
-  id: string;
-  login: string;
-  avatar_url: string;
-}
+
 
 export const ListPage: React.FC = () => {
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
-
-  React.useEffect(() => {
-    fetch(`https://api.github.com/orgs/lemoncode/members`)
-      .then((response) => response.json())
-      .then((json) => setMembers(json));
-  }, []);
+  //token 30 dias - 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
+  // React.useEffect(() => {
+  //   fetch(`https://api.github.com/orgs/lemoncode/members`)
+  //     .then((response) => response.json())
+  //     .then((json) => setMembers(json))
+  //     .catch(e => {
+  //       alert(`Caugth error: ${e.message}`)
+  //     });
+  // }, []);
+  const handleSearch = (organizationName: string) => {
+    fetch(`https://api.github.com/orgs/${organizationName}/members`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Error fetching members");
+        }
+      })
+      .then(setMembers)
+      .catch(() => {});
+  };
 
   return (
     <>
-      <h2>Hello from List page</h2>+{" "}
-      <input className="filter-organization" title="filter"></input>
-      <div className="list-user-list-container">
-        <span className="list-header">Avatar</span>
-        <span className="list-header">Id</span>
-        <span className="list-header">Name</span>
-        {members.map((member) => (
-          <>
-            <img title="Avatar" src={member.avatar_url} />
-            <span>{member.id}</span>
-            <Link to={`/detail/${member.login}`}>{member.login}</Link>
-          </>
-        ))}
+      <AppNavBar />
+      <h2>Finder members of an organization</h2>
+     
+      <div className="container">
+      <OrganizationSearch onSearch={handleSearch} />
+        <Box component="ul" sx={{display: 'flex', gap: 2, flexWrap: 'wrap', p: 0, m: 0 }}>
+            {members.map((member) => (
+              <MemberCard key={member.id} member={member} />
+            ))}
+        </Box>
       </div>
-      <Link to="/detail">Navigate to detail page</Link>
     </>
   );
 };
