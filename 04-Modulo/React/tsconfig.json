@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "es6",
+    "strict": false,
     "moduleResolution": "node",
     "declaration": false,
     "noImplicitAny": false,
@@ -11,7 +12,11 @@
     "noLib": false,
     "suppressImplicitAnyIndexErrors": true,
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
