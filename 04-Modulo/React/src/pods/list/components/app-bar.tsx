@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import CodeOff from '@mui/icons-material/CodeOff';
 import { ProfileContext } from '@/core/providers/profile';
 import { AccountCircle } from '@mui/icons-material';
+import  ButtonMantra from "@/common/components/button-mantra";
 
 export default function AppNavBar() {
 
@@ -27,7 +28,7 @@ export default function AppNavBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <AccountCircle /> { username }
           </Typography>
-        
+          <ButtonMantra />
         </Toolbar>
       </AppBar>
     </Box>
