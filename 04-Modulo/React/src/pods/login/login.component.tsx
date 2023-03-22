@@ -10,6 +10,7 @@ import { LoginFormData, createEmptyFormData } from "./login.vm";
 import { routes } from "@/router/routes";
 import { doLogin } from "./login.api";
 import { ProfileContext } from "@/core/providers/profile";
+import { Box } from "@mui/material";
 
 export const Login: React.FC = (props) => {
   const [formData, setFormData] = React.useState<LoginFormData>(
@@ -43,19 +44,32 @@ export const Login: React.FC = (props) => {
         <CardHeader title="Login" />
         <CardContent>
           <form onSubmit={handleSubmit}>
-            <TextField
-              placeholder="Username"
-              label="Username"
-              value={formData.username}
-              onChange={handleChange("username")}
-            />
-            <TextField
-              placeholder="Password"
-              label="Password"
-              type="password"
-              value={formData.password}
-              onChange={handleChange("password")}
-            />
+            <Box component="form" noValidate sx={{ mt: 1 }}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="Username"
+                label="Username"
+                name="Username"
+                autoComplete="Username"
+                autoFocus
+                value={formData.username}
+                onChange={handleChange("username")}
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="Password"
+                label="Password"
+                type="password"
+                id="Password"
+                autoComplete="current-password"
+                value={formData.password}
+                onChange={handleChange("password")}
+              />
+            </Box>
             <Button variant="contained" type="submit">
               Login
             </Button>
