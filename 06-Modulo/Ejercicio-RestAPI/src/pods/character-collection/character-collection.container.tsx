@@ -17,11 +17,6 @@ export const CharacterCollectionContainer = () => {
     navigate(linkRoutes.editCharacter(id));
   };
 
-  // const handleDelete = async (id: string) => {
-  //   await deleteCharacter(id);
-  //   loadCharacterCollection();
-  // };
-
   return (
     <CharacterCollectionComponent
       characterCollection={characterCollection}

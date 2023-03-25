@@ -9,10 +9,12 @@ export const getCharacter = async (id: string): Promise<Character> => {
 };
 
 export const saveCharacter = async (character: Character): Promise<boolean> => {
-  if (character.id) { //POST
-    axios.put(`${url}/${character.id}`, character);
-  } else { //PUT
-    axios.post(`${url}`, character);
+  if (character.id) {
+    console.log(character);
+    await axios.put<Character>(`${url}/${character.id}`, character);
+    return true;
+  } else {
+    return false;
   }
-  return true;
+
 };

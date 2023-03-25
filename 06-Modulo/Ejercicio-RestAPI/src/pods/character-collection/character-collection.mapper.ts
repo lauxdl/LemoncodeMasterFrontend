@@ -11,5 +11,5 @@ export const mapFromApiToVm = (
   species: character.species,
   gender: character.gender,
   origin: character.origin.name,
-  location: character.location.name,
+  location: character.location.name
 });

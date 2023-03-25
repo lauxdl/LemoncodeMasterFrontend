@@ -5,16 +5,16 @@ export interface CharacterEntityApi {
   species: string;
   type: string;
   gender: string;
-  origin: {
-    name: string;
-    url: string;
-  };
-  location: {
-    name: string;
-    url: string;
-  };
+  origin: LocationApi;
+  location: LocationApi;
   image: string;
   episode: string[];
   url: string;
-  created: Date;
+  created: string;
+}
+
+export interface LocationApi {
+  id: string;
+  name: string;
+  url: string;
 }

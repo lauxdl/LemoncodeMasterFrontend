@@ -33,5 +33,5 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
     }
   };
 
-  return <CharacterComponent character={character}  onSave={handleSave} />;
+  return <CharacterComponent character={character} onSavebestSentence={handleSave} />;
 };
