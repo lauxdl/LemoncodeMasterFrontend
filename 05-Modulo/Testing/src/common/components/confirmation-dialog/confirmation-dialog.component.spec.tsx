@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { ConfirmationDialogComponent } from './confirmation-dialog.component';
 
 describe('common/components/confirmation-dialog.component specs', () => {
+
   it('should render a dialog view with a title when props are received', () => {
     // Arrange
     const props = {
@@ -18,13 +19,12 @@ describe('common/components/confirmation-dialog.component specs', () => {
     }
 
     // Act
-
-    const { getByRole , getByText   } = render(<ConfirmationDialogComponent {...props} />);
+    const element = render(<ConfirmationDialogComponent {...props} />);
 
     // Assert
-
-    expect(getByRole('heading', { level: 2 })).not.toBeNull();
-    expect(getByRole('heading', { level: 2 })).toBeInTheDocument();
+    expect(element.getByRole('heading', { level: 2 })).not.toBeNull();
+    expect(element.getByRole('heading', { level: 2 })).toBeInTheDocument();
 
   })
+
 })
