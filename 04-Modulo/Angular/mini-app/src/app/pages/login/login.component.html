@@ -1,0 +1,25 @@
+<mat-card>
+  <div *ngIf="error" [innerHTML]="showInfo" class="alert alert-danger">{{showInfo}}</div>
+  <div *ngIf="!error" [innerHTML]="showInfo" class="alert alert-info">{{showInfo}}</div>
+  <mat-card-title>{{title}}</mat-card-title>
+  <mat-card-content>
+  <form [formGroup]="form" (ngSubmit)="login()">
+  <p>
+    <mat-form-field>
+      <input type="text" matInput phUser="Username" [(ngModel)]="loginUser.username" formControlName="username" required>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input type="password" matInput phPass="Password" [(ngModel)]="loginUser.password" formControlName="password" required>
+    </mat-form-field>
+  </p>
+
+  <div class="button">
+    <button type="submit" mat-button>Login</button>
+  </div>
+
+  </form>
+  </mat-card-content>
+</mat-card>

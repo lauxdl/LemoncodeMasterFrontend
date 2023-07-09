@@ -1,0 +1,5 @@
+<div class="gallery">
+    <figure *ngFor="let image of listImages;  let i = index" [attr.data-index]="i" class="gallery__item gallery__item--{{i+1}}">
+      <img [src]="image.url" alt="{{image.description}}" class="gallery__img">
+    </figure>
+</div>

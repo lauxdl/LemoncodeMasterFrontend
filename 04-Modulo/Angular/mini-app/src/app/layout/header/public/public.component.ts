@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 @Component({
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./public.component.scss'],
 })
 export class PublicComponent {
-
+  title = 'Angular-Lemoncode'
 }

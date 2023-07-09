@@ -1,0 +1,26 @@
+.content{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+.example-card {
+  max-width: 400px;
+  img{
+    width: 400px;
+    height: 400px;;
+  }
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.example-header-image2 {
+  background-image: url('https://api.slingacademy.com/public/sample-photos/2.jpeg');
+  background-size: cover;
+}
+
+p{
+  margin: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

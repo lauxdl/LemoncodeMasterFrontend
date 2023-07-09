@@ -1,1 +1,45 @@
-<p>private works!</p>
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <a class="logo">
+      <img width="60" alt="Lemoncode Angular Logo" src="./assets/img/lemonAngular.png" />
+      <span>Mini App</span>
+    </a>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+
+    <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+      <li>
+        <span> Bienvenido: {{userName}} </span>
+      </li>
+      <li>
+        <a routerLink="/dashboard">
+          <mat-icon class="icon">dashboard</mat-icon>
+          <span class="label">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/gallery">
+          <mat-icon class="icon">grid_on</mat-icon>
+          <span  class="label">Galería</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/profile">
+          <mat-icon class="icon">person</mat-icon>
+          <span class="label">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/logout">
+          <mat-icon class="icon">input</mat-icon>
+          <span class="label">LogOut</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
